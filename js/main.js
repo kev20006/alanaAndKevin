@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  $("#photoGal").css({"width":"400px"});
   rsvpContent = "";
   var jumbo = "rsvp";
   var col1 = "Accomodation";
