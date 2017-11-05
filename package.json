@@ -4,7 +4,7 @@
   "description": "3rd attempt at an express JS server",
   "main": "app.js",
   "scripts": {
-    "start": "app.js",
+    "start": "node app.js",
     "test": "cat"
   },
   "author": "kev20006",
