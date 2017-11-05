@@ -40,7 +40,7 @@
 		var prefix = getPrefix();
 		var zindex = 0;
 		var width = 0;
-		var height = 0;
+		var height = 400;
 		$this.addClass("js-photostack");
 		$children.each(function(){
 			var $child = $(this);
