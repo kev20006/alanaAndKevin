@@ -1,0 +1,23 @@
+{
+  "name": "alanaandkevin",
+  "version": "1.0.0",
+  "description": "3rd attempt at an express JS server",
+  "main": "app.js",
+  "scripts": {
+    "start": "app.js",
+    "test": "cat"
+  },
+  "author": "kev20006",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.12.6"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "wedding",
+    "app"
+  ]
+}

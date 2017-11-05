@@ -1,0 +1,165 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@font-face {
+  font-family: bleh;
+  src:url("../fonts/DKCarteBlanche.otf");
+}
+
+@font-face {
+  font-family: sixteen;
+  src:url("../fonts/sixteen.ttf");
+}
+
+@font-face {
+  font-family: BYBC;
+  src:url("../fonts/BYBC.ttf");
+}
+.polaroid-images a
+{
+	background: white;
+	display: inline;
+	float: left;
+	margin: 0 15px;
+	padding: 10px 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	-webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+	box-shadow: 0 4px 6px rgba(0,0,0,.3);
+	-webkit-transition: all .15s linear;
+	-moz-transition: all .15s linear;
+	transition: all .15s linear;
+	z-index:0;
+        position:relative;
+}
+
+.polaroid-images a:after {
+	color: #333;
+	font-size: 20px;
+	content: attr(title);
+	position: relative;
+	top:15px;
+}
+
+.polaroid-images img {
+	display: block;
+	width: inherit;
+}
+
+body{
+  background-color: FloralWhite ;
+}
+
+.bigger{
+  font-size: 64px;
+}
+
+.gallery{
+  border:30px 30px 100px 30px;
+  border-style: solid "white";
+  max-height:400px;
+  max-width: 400px;
+}
+
+.spacing{
+  padding-top:50px;
+}
+.textHeading{
+  font-family: BYBC;
+  color: #57cc4e;
+}
+.background-image{
+  background-image: url("../img/background.jpg");
+  background-size: cover;    /* Full height */
+    /* Create the parallax scrolling effect */
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75%;
+}
+
+.background-image2{
+  background-image: url("../img/AccommodationBG2.jpg");
+  background-size: cover;    /* Full height */
+    /* Create the parallax scrolling effect */
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75%;
+}
+
+.weddingicons{
+  font-size: 2em;
+  color: #57cc4e;
+  -webkit-text-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+	-moz-text-shadow: 0 4px 6px rgba(0,0,0,.3);
+	text-shadow: 0 4px 6px rgba(0,0,0,.3);
+	z-index:0;
+}
+.accom{
+  width:100%;
+  margin:0px;
+}
+.textHeadingBlack{
+  font-family: BYBC;
+  color: #606060;
+}
+
+.titleFont{
+  font-family: bleh;
+  color:#606060;
+  filter: blur(0px);
+}
+
+
+.andText{
+  font-family: sixteen;
+  color: #57cc4e;
+}
+
+.thumb{
+  max-width:300px;
+  border-radius: 10px;
+  height:200px;
+  margin: 0 auto;
+}
+
+.tb{
+  color:#606060;
+  font-family: BYBC;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px dotted #606060;
+}
+
+.invite{
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 0 4px 6px rgba(0,0,0,.3);
+	box-shadow: 0 4px 6px rgba(0,0,0,.3);
+}
+
+.invite-inner{
+  padding-top:75px;
+  min-height:600px;
+  border: 3px dotted #57cc4e;
+}
+.end{
+  background-color: green;
+  font-size:14pt;
+}
+
+.spacing-bottom{
+  padding-bottom:70px;
+}
