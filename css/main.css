@@ -36,6 +36,10 @@
         position:relative;
 }
 
+
+.ULfix{
+  max-width:400px;
+}
 .polaroid-images a:after {
 	color: #333;
 	font-size: 20px;
