@@ -10,9 +10,8 @@
     }
     var getPrefix = function(){
     	var userAgent = window.navigator.userAgent.toLowerCase();
-    	if(userAgent.indexOf("msie") != -1){
-    		return "-ms-";
-    	}else if(userAgent.indexOf("chrome") != -1 || userAgent.indexOf("safari") != -1){
+
+    	if(userAgent.indexOf("chrome") != -1 || userAgent.indexOf("safari") != -1){
     		return "-webkit-"
     	}else if(userAgent.indexOf("firefox") != -1){
     		return "-moz-";
