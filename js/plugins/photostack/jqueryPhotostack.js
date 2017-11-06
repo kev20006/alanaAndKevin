@@ -8,8 +8,8 @@
 	var getRand = function (a, b) {
         return ~~(Math.random() * (b - a + 1)) + a;
     }
-    //var getPrefix = function(){
-    	//var userAgent = window.navigator.userAgent.toLowerCase();
+    var getPrefix = function(){
+    	var userAgent = window.navigator.userAgent.toLowerCase();
 
     	if(userAgent.indexOf("chrome") != -1 || userAgent.indexOf("safari") != -1){
     		return "-webkit-"
