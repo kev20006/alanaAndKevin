@@ -65,7 +65,7 @@ body{
   border:30px 30px 100px 30px;
   border-style: solid "white";
   max-height:400px;
-  max-width: 400px;
+  max-width:300px;
 }
 
 .spacing{
@@ -88,6 +88,17 @@ body{
 
 .background-image2{
   background-image: url("../img/AccommodationBG2.jpg");
+  background-size: cover;    /* Full height */
+    /* Create the parallax scrolling effect */
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75%;
+}
+
+.background-image3{
+  background-image: url("../img/ballyliffinBG.jpg");
   background-size: cover;    /* Full height */
     /* Create the parallax scrolling effect */
 	background-attachment: fixed;

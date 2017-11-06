@@ -23,10 +23,10 @@
     	}
     }
     var def = {
-    	top:40,
-    	left:400,
-    	degFrom:-20,
-    	degTo:20,
+    	top:-40,
+    	left:0,
+    	degFrom:-10,
+    	degTo:10,
     	animation:"move",
     	animationSpeed:500,
     	timespan:0,
@@ -39,8 +39,17 @@
 		var $children = $this.children();
 		var prefix = getPrefix();
 		var zindex = 0;
-		var width = 400;
-		var height = 400;
+		var width = 300;
+		var height = 300;
+		//var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+		//if (isMobile) {
+		//	width = 200;
+			//height = 200;
+		//}else{
+		//	width = 400;
+			//height = 400;
+		//}
+
 		$this.addClass("js-photostack");
 		$children.each(function(){
 			var $child = $(this);

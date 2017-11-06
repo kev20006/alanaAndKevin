@@ -4,7 +4,7 @@ var url = "mongodb://kev20006:Newp4ssword2@weddinglist-shard-00-00-d5pnu.mongodb
 
 MongoClient.connect(url, (err, db)=> {
   if (err) throw err;
-  db.collection("testy").find().toArray((err,result) =>{
+  db.collection("weddingList").find().toArray((err,result) =>{
     if(err) throw err;
     console.log(result);
     db.close();
