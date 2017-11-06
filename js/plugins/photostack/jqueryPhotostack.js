@@ -8,8 +8,8 @@
 	var getRand = function (a, b) {
         return ~~(Math.random() * (b - a + 1)) + a;
     }
-    var getPrefix = function(){
-    	var userAgent = window.navigator.userAgent.toLowerCase();
+    //var getPrefix = function(){
+    	//var userAgent = window.navigator.userAgent.toLowerCase();
 
     	if(userAgent.indexOf("chrome") != -1 || userAgent.indexOf("safari") != -1){
     		return "-webkit-"
@@ -40,14 +40,6 @@
 		var zindex = 0;
 		var width = 300;
 		var height = 300;
-		//var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-		//if (isMobile) {
-		//	width = 200;
-			//height = 200;
-		//}else{
-		//	width = 400;
-			//height = 400;
-		//}
 
 		$this.addClass("js-photostack");
 		$children.each(function(){
