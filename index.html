@@ -11,18 +11,22 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="js/plugins/photostack/jqueryPhotostack.css">
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <style>
             body {
                 padding-top: 50px;
+                width:100%;
             }
         </style>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/jquery-1.11.2.min.js"></script>
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+        <!--<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>-->
         <script src="js/main.js"></script>
     </head>
     <body>
@@ -30,7 +34,7 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <nav class="navbar navbar-default navbar-fixed-top">
-
+              <div class="container-fluid">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
                   <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -51,13 +55,13 @@
                     <li><a href="#">RSVP</a></li>
                   </ul>
               </div>
-
+          </div>
       </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div id ="jumbo" class="jumbotron background-image">
-      <div class="container text-center fadey">
-        <div class="row spacing" style="height:500px">
+      <div class="container-fluid text-center fadey">
+        <div id="photoRow"class="row spacing">
 
                 <ul id="photoGal" class="photostack center-block polaroid-images spacing" style="max-width:400px;">
                   <li><a><img class="gallery img-responsive" src="img/Gallery/sleepytrain.jpg"></a></li>
@@ -70,8 +74,8 @@
                   <li><a><img class="gallery img-responsive" src="img/Gallery/train2.jpg"></a></li>
               		<li><a><img class="gallery img-responsive" src="img/Gallery/amsterdam.jpg"></a></li>
                   <li><a><img class="gallery img-responsive" src="img/Gallery/bagan.jpg"></a></li>
-                  <li><a><img class="gallery img-responsive" src="img/Gallery/amsterdam2.jpg"></a></li>
                   <li><a><img class="gallery img-responsive" src="img/Gallery/singapore.jpg"></a></li>
+                  <li><a><img class="gallery img-responsive" src="img/Gallery/amsterdam2.jpg"></a></li>
           	   </ul>
         </div>
         <div class="row">
@@ -85,8 +89,8 @@
     </div>
     <div class="container fadey">
       <div class="row">
-        <div class="col-md-12 text-center">
-          <h1 class="text-center spacing bigger"><i class="fa fa-female weddingicons"></i><i class="fa fa-heart weddingicons"></i><i class="fa fa-male weddingicons"></i></h1>
+        <div class="col-xs-12 col-md-12 text-center">
+          <h1 class="text-center spacing"><i class="fa fa-female weddingicons"></i><i class="fa fa-heart weddingicons"></i><i class="fa fa-male weddingicons"></i></h1>
           <h1 class="titleFont">are getting Married</h1>
 
           <p style="color:#606060">...and you lucky people have been invited to celebrate with us.
@@ -116,7 +120,7 @@
       <div class="row spacing" >
         <div class="container">
         <div class="col-md-12">
-          <h1  class="titleFont text-center">Accomodation</h1>
+          <h2  class="titleFont text-center">Accomodation</h1>
           <p>
             There are of course a great many places to stay in Ireland and you are welcome to stay at any of them.
             However, to help you narrow down your search, have have listed some suggestions below.
@@ -127,21 +131,9 @@
       </div>
       <div class="row">
           <div class="col-md-1"></div>
-          <div class="col-md-5 text-center" style="padding-left:50px; padding-right:50px;">
-            <h2 class="titleFont ">Staying in Derry</h2>
-          </div>
-          <div class="col-md-5 text-center" style="padding-left:50px; padding-right:50px;">
-            <h2 class="titleFont">Staying in Ballyliffin</h2>
-        </div>
-
-           <div class="col-md-1"></div>
-       </div>
-
-
-      <div class="row">
-          <div class="col-md-1"></div>
-          <div class="col-md-5 text-center" style="padding-left:50px; padding-right:50px;">
-            <a class="center-block"> <img class="thumb center-block " src="img/Derry-City-Fotolia.jpg"/></a>
+          <div class="col-md-5 text-center" style="padding-left:5%; padding-right:5%;">
+            <h2 class="titleFont ">Derry</h2>
+            <a class="center-block"> <img class="thumb img-responsive center-block " src="img/Derry-City-Fotolia.jpg"/></a>
             <p class="spacing" style="color:#606060">Derry is the closest City to the wedding venue and has an array of hotel options including (but not limited to):</h3>
               <p style="color:#606060">The Bishop's Gate </p>
               <p style="color:#606060">The City Hotel </p>
@@ -149,10 +141,10 @@
               <p style="color:#606060">Water Foot Hotel </p>
               <p style="color:#606060">Travelodge Derry </p>
             <p class="spacing spacing-bottom" style="color:#606060">  We will be running a bus to and from the Wedding from the Derry City Centre - for your convience </p>
-
           </div>
-          <div class="col-md-5 text-center" style="padding-left:50px; padding-right:50px;">
-            <a class=""> <img class="thumb center-block" src="img/ballyliffin.jpg"/></a>
+          <div class="col-md-5 text-center" style="padding-left:5%; padding-right:5%;">
+            <h2 class="titleFont ">Ballyliffin</h2>
+            <a class=""> <img class="thumb img-responsive center-block" src="img/ballyliffin.jpg"/></a>
             <p class="spacing" style="color:#606060">
               If you would like to be closer to the wedding and stay in Ballyliffin, once again you have a number of choices at your disposal.
               There are a number of hotels and holiday homes in the area inlcuding (but not limited to):
@@ -165,9 +157,9 @@
            </div>
 
            <div class="col-md-1"></div>
-       </div>
-       </div>
+    </div>
 
+</div>
        <div class="container fadey accom">
          <div class="container spacing-bottom">
            <div class="row spacing">
@@ -238,6 +230,9 @@
   	$(function(){
   		$(".photostack").Photostack();
   	});
+    $("#photoGal").css({"max-width":"90%"});
+    $("#photoRow").height($("#photoGal").height()+100);
+
   	</script>
     </body>
 </html>

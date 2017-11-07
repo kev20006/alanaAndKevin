@@ -64,8 +64,8 @@ body{
 .gallery{
   border:30px 30px 100px 30px;
   border-style: solid "white";
-  max-height:400px;
-  max-width:300px;
+  max-height:300px;
+  max-width:100%;
 }
 
 .spacing{
@@ -138,9 +138,9 @@ body{
 }
 
 .thumb{
-  max-width:300px;
+  max-width:70%;
   border-radius: 10px;
-  height:200px;
+  max-height:200px;
   margin: 0 auto;
 }
 
