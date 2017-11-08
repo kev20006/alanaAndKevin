@@ -45,7 +45,6 @@ function checkCode(){
   }else{
     $("#part1").css({"padding-top":"0px"})
     var rsvpForm = weddingForm()
-    console.log($("#part1").height());
     $("#part1").html(rsvpForm);
     $("#part1").children("#rsvpd").on("click", function(){
       var reply = JSON.stringify({

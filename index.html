@@ -10,6 +10,7 @@
         <title>alanaandkevin.com</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link rel="stylesheet" href="js/plugins/photostack/jqueryPhotostack.css">
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/7.0.0/normalize.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -26,23 +27,24 @@
   src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar">
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navbarCollapse">
               <div class="container-fluid">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
-                  <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                  <button type="button" data-toggle="collapse" class="navbar-toggle" data-target="#navbarCollapse">
                       <span class="sr-only">Toggle navigation</span>
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                       <span class="icon-bar"></span>
                   </button>
-                  <a href="#" class="navbar-brand"><span>AlanaAndKevin.com</span></a>
+                  <a href="#" class="navbar-brand"><span class="textHeading">AlanaAndKevin.com</span></a>
               </div>
               <!-- Collection of nav links and other content for toggling -->
               <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -188,7 +190,8 @@
        <div class="container fadey accom">
        <div id="rsvp" class="row">
          <div class = "col-md-3"></div>
-         <div class="col-md-6 text-center invite">
+         <div class="col-md-6 center-block">
+           <div id="invite" class="text-center invite">
            <div id="part1" class="invite-inner">
              <div id="form" method="post" action="/addguest">
                <h1 class="titleFont"> RSVP </h1>
@@ -200,6 +203,7 @@
              </div>
            </div>
          </div>
+       </div>
          <div class = "col-md-3"></div>
        </div>
      </div>
