@@ -26,7 +26,6 @@
   src="https://code.jquery.com/jquery-1.12.4.min.js"
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
-        <!--<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>-->
         <script src="js/main.js"></script>
     </head>
     <body>
@@ -48,19 +47,19 @@
               <!-- Collection of nav links and other content for toggling -->
               <div id="navbarCollapse" class="collapse navbar-collapse">
                   <ul class="nav navbar-nav navbar-right" style="padding-right:10px;">
-                    <li class="active"><a href="#">Welcome</a></li>
-                    <li><a href="#">Accomodation</a></li>
-                    <li><a href="#">Getting There</a></li>
-                    <li><a href="#">The Event</a></li>
-                    <li><a href="#">RSVP</a></li>
+                    <li class="active"><a href="#welcome">Welcome</a></li>
+                    <li><a href="#accom">Accomodation</a></li>
+                    <li><a href="#gettingThere">Getting There</a></li>
+                    <li><a href="#rsvp">RSVP</a></li>
                   </ul>
               </div>
           </div>
       </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="welcome"></div>
     <div id ="jumbo" class="jumbotron background-image">
-      <div class="container-fluid text-center fadey">
+      <div id="welcome" class="container-fluid text-center fadey">
         <div id="photoRow"class="row spacing">
 
                 <ul id="photoGal" class="photostack center-block polaroid-images spacing" style="max-width:400px;">
@@ -116,7 +115,7 @@
 
 
    </div>
-    <div class="container fadey accom background-image2">
+    <div id="accom" class="container fadey accom background-image2">
       <div class="row spacing" >
         <div class="container">
         <div class="col-md-12">
@@ -160,7 +159,7 @@
     </div>
 
 </div>
-       <div class="container fadey accom">
+       <div id="gettingThere" class="container fadey accom">
          <div class="container spacing-bottom">
            <div class="row spacing">
            <div class="col-md-12">
@@ -186,24 +185,8 @@
        </div>
       </div>
 
-      <div class="container fadey  background-image3 accom">
-        <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1  class="titleFont text-center">The Menu</h1>
-            <p class="text-center">
-              Aliquam vel finibus ex. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec rutrum vehicula dolor. Vivamus ac magna eu purus sodales ultricies a in enim. Mauris laoreet ultrices nulla, non sagittis sem tempus ultrices. Nunc lacinia massa augue, et volutpat justo suscipit nec. Quisque ac nibh in diam tristique dictum sit amet eu libero. Integer sagittis ante finibus mauris tincidunt maximus. Vestibulum sed neque hendrerit, lobortis odio id, efficitur neque. Phasellus tincidunt leo nulla, et tempor velit consectetur non. Etiam porttitor mauris eu sapien imperdiet, sit amet vestibulum leo tristique. Sed vitae sapien id odio fermentum euismod. Cras diam erat, rutrum et ullamcorper sit amet, maximus ut sapien. Maecenas tortor libero, hendrerit nec cursus sed, eleifend sed risus.
-              <br/>
-              Pellentesque tincidunt ornare nisl. Morbi efficitur facilisis tempus. Nunc id mi lectus. Donec rutrum malesuada pretium. Proin maximus justo nisl, vitae dictum odio scelerisque vitae. Donec erat erat, iaculis vel gravida aliquam, mattis molestie purus. Nunc a velit ac sem laoreet bibendum a eu lacus. Nulla facilisi. Aenean at ullamcorper nunc. Nullam leo elit, aliquam sit amet tempus a, suscipit nec est. Fusce ornare lacinia ligula venenatis luctus. Maecenas a nisi lacus. Quisque eget scelerisque ipsum, eget malesuada nunc. Curabitur scelerisque ut nibh in bibendum.
-            </p>
-          </div>
-        </div>
-        </div>
-
-     </div>
-
        <div class="container fadey accom">
-       <div class="row">
+       <div id="rsvp" class="row">
          <div class = "col-md-3"></div>
          <div class="col-md-6 text-center invite">
            <div id="part1" class="invite-inner">
@@ -212,8 +195,8 @@
                <p class="titleFont">.........................................................................</p>
                <h2 class="titleFont"> Wedding Code: </h2>
                <div id="feedback"></div>
-               <p><input id="code" class="tb  text-center" type="text-box"></input></p>
-               <p id="submit" class="btn btn-md textHeadingBlack" role="button">Submit Code</p>
+               <h3><input id="code" class="tb  text-center" type="text-box"></input></p>
+               <h3 id="submit" class="btn btn-md textHeadingBlack" role="button">Submit Code</p>
              </div>
            </div>
          </div>

@@ -1,8 +1,11 @@
 const express= require('express');
 const app = express();
+var compression = require('compression')
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://kev20006:Newp4ssword2@weddinglist-shard-00-00-d5pnu.mongodb.net:27017,weddinglist-shard-00-01-d5pnu.mongodb.net:27017,weddinglist-shard-00-02-d5pnu.mongodb.net:27017/test?ssl=true&replicaSet=WeddingList-shard-0&authSource=admin";
+
+app.use(compression())
 app.use(bodyParser.json())
 app.use(express.static( __dirname))
 

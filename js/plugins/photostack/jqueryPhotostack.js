@@ -10,22 +10,27 @@
     }
     var getPrefix = function(){
     	var userAgent = window.navigator.userAgent.toLowerCase();
-
+			console.log(userAgent);
     	if(userAgent.indexOf("chrome") != -1 || userAgent.indexOf("safari") != -1){
+				console.log("using webkit");
     		return "-webkit-"
     	}else if(userAgent.indexOf("firefox") != -1){
-    		return "-moz-";
+				console.log("using webkit");
+				return "-moz-";
+
     	}else if(userAgent.indexOf("opera") != -1){
-    		return "-o-";
+				console.log("using webkit");
+				return "-o-";
     	}else{
-    		return "";
+				console.log("else condition using webkit");
+    		return "-webkit-";
     	}
     }
     var def = {
     	top:-40,
-    	left:0,
-    	degFrom:-10,
-    	degTo:10,
+    	left:40,
+    	degFrom:-15,
+    	degTo:15,
     	animation:"move",
     	animationSpeed:500,
     	timespan:0,

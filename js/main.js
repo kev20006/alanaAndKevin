@@ -11,19 +11,35 @@ $(document).ready(function(){
   $("#submit").on("click", function(){checkCode()});
   $("#part1").css("min-height", function(){
       return $(this).height();
-  })
-  $("#colBut1").on("click",function(){
-
-
-})
+  });
+  $("a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
 
 function checkCode(){
   console.log("click")
-  var weddingCode = $("#code").val();
+  var weddingCode = $("#code").val().toLowerCase();;
+  console.log(weddingCode)
+  console.log("alanaandkevin123")
   if(weddingCode === ""){
     $("#code").val("");
     $("#feedback").text("Please Enter a Wedding Code");
-  }else if (weddingCode !== "123"){
+  }else if (weddingCode !== "alanaandkevin123"){
     $("#code").val("");
     $("#feedback").text("Incorrect Code");
   }else{
@@ -56,15 +72,15 @@ function checkCode(){
 //HTML TEMPLATES BELOW HERE - PROBABLY a Better way to do it......
 function weddingForm(){
   var rsvp =
-  '<h2 class="titleFont">Please enter your names</h3>'+
-  '<h3 id="names"> <input class="tb  text-center" type="text-box"></input></p>'+
-  '<h2 class="titleFont">Will you be attending?</h3>'+
-  '<h3 class="tb" style="border: 0px;" id="attending"><input name="attending" value = "yes" type="radio" style="margin-right:10px;">Yes</input><input name="attending" value ="no" style="margin-left:50px; margin-right:10px;" type="radio">No</input></p>'+
-  '<h2 class="titleFont">Where will you be staying?</h3>'+
-  '<h3 class="tb" style="border: 0px;" id="staying"><input value="Ballyliffin" name ="staying" type="radio" style="margin-right:10px;">Balyliffin</input><input name="staying" value="Derry" type="radio" style="margin-left:50px; margin-right:10px;">Derry</input></p>'+
-  '<h2 class="titleFont">Do You have any dietary requirements?</h3>'+
-  '<h3 id="bus"><input  class="tb  text-center" type="text-box"></input></p>' +
-  '<h3 id="rsvpd" type="submit" class="btn btn-md textHeadingBlack" role="button">Submit</p>'
+  '<br/><h4 class="titleFont">Please enter your names</h3>'+
+  '<h4 id="names"> <input class="tb  text-center" type="text-box"></input></p><br/>'+
+  '<h4 class="titleFont">Will you be attending?</h3>'+
+  '<h4 class="tb" style="border: 0px;" id="attending"><input name="attending" value = "yes" type="radio" style="margin-right:10px;">Yes</input><input name="attending" value ="no" style="margin-left:50px; margin-right:10px;" type="radio">No</input></p><br/>'+
+  '<h4 class="titleFont">Where will you be staying?</h3>'+
+  '<h4 class="tb" style="border: 0px;" id="staying"><input value="Ballyliffin" name ="staying" type="radio" style="margin-right:10px;">Balyliffin</input><input name="staying" value="Derry" type="radio" style="margin-left:50px; margin-right:10px;">Derry</input><input name="staying" value="Other" type="radio" style="margin-left:50px; margin-right:10px;">Other</input></p><br/>'+
+  '<h4 class="titleFont">Do You have any dietary requirements?</h3>'+
+  '<h4 id="bus"><input  class="tb  text-center" type="text-box"></input></p> <br/>' +
+  '<h4 id="rsvpd" class="btn btn-md textHeadingBlack" role="button">Submit</p>'
   return rsvp
 }
 
@@ -78,4 +94,6 @@ function thankYou(bool){
    return thanks
 }
 
-});
+
+
+;
