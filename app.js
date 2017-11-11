@@ -39,7 +39,7 @@ app.listen((process.env.PORT || 5000), ()=> {
 function pushToDB(obj){
   MongoClient.connect(url, (err, db)=> {
     if (err) throw err;
-    db.collection("weddingList").insertOne(obj,(err, res) =>{
+    db.collection("weddingList2").insertOne(obj,(err, res) =>{
       if(err) throw err;
       console.log("1 thing inserted");
       db.close();
