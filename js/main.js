@@ -57,7 +57,8 @@ function checkCode(){
         staying: staying,
         diet: diet
       })
-      if(name === "" || attending === ""){
+      console.log(attending)
+      if(name === "" || attending === undefined){
         $("#part1").children("#error").text("Please make sure all fields have been filled")
       }else{
         $.ajax("/submit", {
