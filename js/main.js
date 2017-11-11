@@ -84,7 +84,11 @@ function weddingForm(){
   '<h4 class="titleFont">Will you be attending?*</h3>'+
   '<h4 class="tb" style="border: 0px;" id="attending"><input name="attending" value = "yes" type="radio" style="margin-right:10px;">Yes</input><input name="attending" value ="no" style="margin-left:50px; margin-right:10px;" type="radio">No</input></p><br/>'+
   '<h4 class="titleFont">Where will you be staying?*</h3>'+
-  '<h4 class="tb" style="border: 0px;" id="staying"><input value="Ballyliffin" name ="staying" type="radio" style="margin-right:10px;">Balyliffin</input><input name="staying" value="Derry" type="radio" style="margin-left:50px; margin-right:10px;">Derry</input><input name="staying" value="Other" type="radio" style="margin-left:50px; margin-right:10px;">Other</input></p><br/>'+
+  '<div class="row">'+
+  '<div class="col-md-4"><h4 class="tb" style="border: 0px;"><input value="Ballyliffin" name ="staying" type="radio" style="margin-right:10px;">Balyliffin</input></h4></div>' +
+  '<div class="col-md-4"><h4 class="tb" style="border: 0px;"><input name="staying" value="Derry" type="radio" style="margin-right:10px;">Derry</input></h4></div>'+
+  '<div class="col-md-4"><h4 class="tb" style="border: 0px;"><input name="staying" value="Other" type="radio" style="margin-right:10px;">Other</input></h4></div>'+
+  '</div>'+
   '<h4 class="titleFont">Do You have any dietary requirements?*</h3>'+
   '<h4 id="bus"><input  class="tb  text-center" type="text-box"></input></p> <br/>' +
   '<h4 id="rsvpd" class="btn btn-md textHeadingBlack" role="button"><a href="#rsvp">Submit</a></p>'

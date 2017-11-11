@@ -21,12 +21,12 @@ app.post('/submit', (req, res) =>{
     name: req.body.name,
     attending: req.body.attending,
     staying: req.body.staying,
-    diet: req.body.bus
+    diet: req.body.diet
   }
   console.log(req.body.name);
   console.log(req.body.attending);
   console.log(req.body.staying);
-  console.log(req.body.bus);
+  console.log(req.body.diet);
   pushToDB(newObj)
 })
 
