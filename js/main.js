@@ -47,22 +47,30 @@ function checkCode(){
     var rsvpForm = weddingForm()
     $("#part1").html(rsvpForm);
     $("#part1").children("#rsvpd").on("click", function(){
+      var name = $("#part1").children("#names").children("input").val();
+      var attending = $('input[name=attending]:checked').val();
+      var staying = $('input[name=staying]:checked').val();
+      var diet =  $("#part1").children("#bus").children("input").val();
       var reply = JSON.stringify({
-        name: $("#part1").children("#names").children("input").val(),
-        attending: $('input[name=attending]:checked').val(),
-        staying: $('input[name=staying]:checked').val(),
-        bus: $("#part1").children("#bus").children("input").val()
+        name: name,
+        attending: attending,
+        staying: staying,
+        diet: diet
       })
-      $.ajax("/submit", {
-        data : reply,
-        contentType : 'application/json',
-        type : 'POST',
-        dataType: 'json'
-  })
-      console.log(reply);
-      var thanks = thankYou(true);
-      $("#part1").css({"padding-top":"75px"})
-      $("#part1").html(thanks);
+      if(name === "" || attending === ""){
+        $("#part1").children("#error").text("Please make sure all fields have been filled")
+      }else{
+        $.ajax("/submit", {
+          data : reply,
+          contentType : 'application/json',
+          type : 'POST',
+          dataType: 'json'
+        })
+        console.log(reply);
+        var thanks = thankYou(true);
+        $("#part1").css({"padding-top":"75px"})
+        $("#part1").html(thanks);
+      }
     });
   }
 }
@@ -70,16 +78,16 @@ function checkCode(){
 
 //HTML TEMPLATES BELOW HERE - PROBABLY a Better way to do it......
 function weddingForm(){
-  var rsvp =
-  '<br/><h4 class="titleFont">Please enter your names</h3>'+
+  var rsvp ='<div id="error"></div>'+
+  '<br/><h4 class="titleFont">Please enter your names*</h3>'+
   '<h4 id="names"> <input class="tb  text-center" type="text-box"></input></p><br/>'+
-  '<h4 class="titleFont">Will you be attending?</h3>'+
+  '<h4 class="titleFont">Will you be attending?*</h3>'+
   '<h4 class="tb" style="border: 0px;" id="attending"><input name="attending" value = "yes" type="radio" style="margin-right:10px;">Yes</input><input name="attending" value ="no" style="margin-left:50px; margin-right:10px;" type="radio">No</input></p><br/>'+
-  '<h4 class="titleFont">Where will you be staying?</h3>'+
+  '<h4 class="titleFont">Where will you be staying?*</h3>'+
   '<h4 class="tb" style="border: 0px;" id="staying"><input value="Ballyliffin" name ="staying" type="radio" style="margin-right:10px;">Balyliffin</input><input name="staying" value="Derry" type="radio" style="margin-left:50px; margin-right:10px;">Derry</input><input name="staying" value="Other" type="radio" style="margin-left:50px; margin-right:10px;">Other</input></p><br/>'+
-  '<h4 class="titleFont">Do You have any dietary requirements?</h3>'+
+  '<h4 class="titleFont">Do You have any dietary requirements?*</h3>'+
   '<h4 id="bus"><input  class="tb  text-center" type="text-box"></input></p> <br/>' +
-  '<h4 id="rsvpd" class="btn btn-md textHeadingBlack" role="button">Submit</p>'
+  '<h4 id="rsvpd" class="btn btn-md textHeadingBlack" role="button"><a href="#rsvp">Submit</a></p>'
   return rsvp
 }
 
